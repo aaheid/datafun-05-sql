@@ -8,9 +8,9 @@
 
 [project]
 site_name = "Project Documentation" # CUSTOM: Name of the documentation site."
-site_url = "https://denisecase.github.io/datafun-05-sql/"
-repo_url = "https://github.com/denisecase/datafun-05-sql"
-repo_name = "denisecase/datafun-05-sql"
+site_url = "https://aaheid.github.io/datafun-05-sql/"
+repo_url = "https://github.com/aaheid/datafun-05-sql"
+repo_name = "aaheid/datafun-05-sql"
 site_description = "Project Documentation"
 docs_dir = "docs" # source directory for documentation markdown files
 site_dir = "site" # output directory for generated site (ignored by Git; not in repo)
@@ -19,7 +19,7 @@ edit_uri = "edit/main/docs/" # "Edit this page" links (GitHub)
 [project.extra]
 # WHY: Social links provide easy access to project repositories and profiles.
 social = [
-    {icon = "fontawesome/brands/github", link = "https://github.com/denisecase/datafun-05-sql" },
+    {icon = "fontawesome/brands/github", link = "https://github.com/aaheid/datafun-05-sql" },
 ]
 
 # ------------------------------------------------------------
