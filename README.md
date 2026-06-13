@@ -227,22 +227,53 @@ I copied the DuckDB example app and SQL query, then modified the sales-by-catego
 
 ## Custom SQL Project
 
-For Phase 5, I created a new SQL query to identify which store generated the highest total sales revenue.
+## Custom Project Work
 
-### New Business Question
+### Phase 4 Technical Modification
 
-Which store had the highest total revenue?
+For Phase 4, I created a custom SQL query and modified the example DuckDB pipeline.
 
-### Changes Made
+New files created:
 
-- Created aaheid_retail_query_top_store.sql
-- Added a new SQL query using SUM(amount)
-- Updated app_retail_duckdb_aaheid.py to execute the new query
+- `app_retail_duckdb_aaheid.py`
+- `aaheid_retail_query_sales_by_category.sql`
+
+I modified the retail sales query so product categories were analyzed by total revenue. This allowed me to compare product categories based on sales performance instead of only reviewing the original example output.
+
+### Phase 5 New Domain Project
+
+For Phase 5, I created a new SQL pipeline using the **library** domain instead of the retail domain.
+
+New files created:
+
+- `app_library_duckdb_aaheid.py`
+- `aaheid_library_clean.sql`
+- `aaheid_library_bootstrap.sql`
+- `aaheid_library_query_branch_count.sql`
+- `aaheid_library_query_checkout_count.sql`
+- `aaheid_library_query_checkouts_by_branch.sql`
+
+### Dataset Description
+
+This project uses a library dataset with two related tables:
+
+- **branch** — stores library branch information such as branch name, city, and system name.
+- **checkout** — stores checkout transaction data including material type, checkout duration, fines, and checkout date.
+
+Relationship:
+
+- One **branch** can have many **checkout** records.
+- The `branch_id` field serves as the primary key in the branch table and a foreign key in the checkout table.
 
 ### Results
 
-The query ranked stores by total sales and identified the highest performing store.
+The SQL queries were used to:
+
+- Count the number of library branches
+- Count the total number of checkouts
+- Compare checkout activity and total fines collected by branch
 
 ### What I Learned
 
-I learned how SQL queries can answer different business questions by grouping, aggregating, and sorting data.
+This project helped me understand how Python can automate SQL execution and how SQL queries can answer analytical questions by using filtering, grouping, sorting, joins, and aggregation functions.
+This project helped me realize that I needed to read the project instructions.  

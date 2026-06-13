@@ -1,0 +1,2 @@
+DROP TABLE IF EXISTS checkout;
+DROP TABLE IF EXISTS branch;

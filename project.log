@@ -453,3 +453,46 @@
 2026-06-12 22:15:38 | INFO | P05 | Executed successfully!
 2026-06-12 22:15:38 | INFO | P05 | ========================
 2026-06-12 22:15:38 | INFO | P05 | END main()
+2026-06-12 23:23:09 | INFO | P05 | === RUN START ===
+2026-06-12 23:23:09 | INFO | P05 | project=P05 Library Pipeline
+2026-06-12 23:23:09 | INFO | P05 | repo_dir=datafun-05-sql
+2026-06-12 23:23:09 | INFO | P05 | python=3.14.5
+2026-06-12 23:23:09 | INFO | P05 | os=Windows 11
+2026-06-12 23:23:09 | INFO | P05 | shell=powershell
+2026-06-12 23:23:09 | INFO | P05 | cwd=.
+2026-06-12 23:23:09 | INFO | P05 | github_actions=False
+2026-06-12 23:23:09 | INFO | P05 | START main()
+2026-06-12 23:23:09 | INFO | P05 | ROOT_DIR: C:\Repos\datafun-05-sql
+2026-06-12 23:23:09 | INFO | P05 | SQL_DIR: C:\Repos\datafun-05-sql\sql\duckdb
+2026-06-12 23:23:09 | INFO | P05 | DB_PATH: C:\Repos\datafun-05-sql\artifacts\duckdb\library.duckdb
+2026-06-12 23:23:09 | INFO | P05 | RUN SQL script: C:\Repos\datafun-05-sql\sql\duckdb\aaheid_library_clean.sql
+2026-06-12 23:23:09 | INFO | P05 | DONE SQL script: C:\Repos\datafun-05-sql\sql\duckdb\aaheid_library_clean.sql
+2026-06-12 23:23:09 | INFO | P05 | RUN SQL script: C:\Repos\datafun-05-sql\sql\duckdb\aaheid_library_bootstrap.sql
+2026-06-12 23:23:09 | INFO | P05 | DONE SQL script: C:\Repos\datafun-05-sql\sql\duckdb\aaheid_library_bootstrap.sql
+2026-06-12 23:23:09 | INFO | P05 | 
+2026-06-12 23:23:09 | INFO | P05 | RUN SQL query: C:\Repos\datafun-05-sql\sql\duckdb\aaheid_library_query_branch_count.sql
+2026-06-12 23:23:09 | INFO | P05 | ====================================
+2026-06-12 23:23:09 | INFO | P05 | aaheid_library_query_branch_count.sql
+2026-06-12 23:23:09 | INFO | P05 | ====================================
+2026-06-12 23:23:09 | INFO | P05 | branch_count
+2026-06-12 23:23:09 | INFO | P05 | 3
+2026-06-12 23:23:09 | INFO | P05 | 
+2026-06-12 23:23:09 | INFO | P05 | RUN SQL query: C:\Repos\datafun-05-sql\sql\duckdb\aaheid_library_query_checkout_count.sql
+2026-06-12 23:23:09 | INFO | P05 | ====================================
+2026-06-12 23:23:09 | INFO | P05 | aaheid_library_query_checkout_count.sql
+2026-06-12 23:23:09 | INFO | P05 | ====================================
+2026-06-12 23:23:09 | INFO | P05 | checkout_count
+2026-06-12 23:23:09 | INFO | P05 | 30
+2026-06-12 23:23:09 | INFO | P05 | 
+2026-06-12 23:23:09 | INFO | P05 | RUN SQL query: C:\Repos\datafun-05-sql\sql\duckdb\aaheid_library_query_checkouts_by_branch.sql
+2026-06-12 23:23:09 | INFO | P05 | ====================================
+2026-06-12 23:23:09 | INFO | P05 | aaheid_library_query_checkouts_by_branch.sql
+2026-06-12 23:23:09 | INFO | P05 | ====================================
+2026-06-12 23:23:09 | INFO | P05 | branch_name, city, checkout_count, total_fines
+2026-06-12 23:23:09 | INFO | P05 | South Branch, Mankato, 10, 8.0
+2026-06-12 23:23:09 | INFO | P05 | Downtown Branch, Duluth, 10, 6.5
+2026-06-12 23:23:09 | INFO | P05 | East Side Branch, Ely, 10, 5.0
+2026-06-12 23:23:09 | INFO | P05 | ========================
+2026-06-12 23:23:09 | INFO | P05 | Executed successfully!
+2026-06-12 23:23:09 | INFO | P05 | ========================
+2026-06-12 23:23:09 | INFO | P05 | END main()
