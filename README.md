@@ -160,27 +160,67 @@ It happens.
 Press `Ctrl+c` (both keys together) or `Ctrl+Z` then `Enter` on Windows.
 
 ## DuckDB Example Output (Replace This with Yours and Describe)
-
+I copied the DuckDB example app and SQL query, then modified the sales-by-category query to sort product categories by total revenue.
 ```shell
-| INFO | P05 | RUN SQL query: C:\Repos\datafun\datafun-05-sql\sql\duckdb\case_retail_query_sales_by_category.sql
-| INFO | P05 | ====================================
-| INFO | P05 | case_retail_query_sales_by_category.sql
-| INFO | P05 | ====================================
-| INFO | P05 | product_category, sale_count, total_revenue, avg_sale_amount
-| INFO | P05 | Outdoors, 9, 3200.0, 355.56
-| INFO | P05 | Clothing, 10, 1375.0, 137.5
-| INFO | P05 | Food, 11, 652.0, 59.27
-| INFO | P05 |
-| INFO | P05 | RUN SQL query: C:\Repos\datafun\datafun-05-sql\sql\duckdb\case_retail_query_kpi_revenue.sql
-| INFO | P05 | ====================================
-| INFO | P05 | case_retail_query_kpi_revenue.sql
-| INFO | P05 | ====================================
-| INFO | P05 | store_id, store_name, city, region, sale_count, total_revenue, avg_sale_amount
-| INFO | P05 | S003, Central Plaza, Mankato, South, 10, 1868.0, 186.8
-| INFO | P05 | S001, North Market, Duluth, North, 10, 1834.0, 183.4
-| INFO | P05 | S002, Lakeside Shop, Ely, North, 10, 1525.0, 152.5
-| INFO | P05 | ========================
-| INFO | P05 | Executed successfully!
-| INFO | P05 | ========================
-| INFO | P05 | END main()
-```
+| INFO | P05 | RUN SQL query: C:\Repos\datafun\datafun-05-sql\sql\duckdb\aaheid_retail_query_sales_by_category.sql
+2026-06-12 21:18:24 | INFO | P05 | === RUN START ===
+2026-06-12 21:18:24 | INFO | P05 | project=P05 Pipeline Example (DuckDB)
+2026-06-12 21:18:24 | INFO | P05 | repo_dir=datafun-05-sql
+2026-06-12 21:18:24 | INFO | P05 | python=3.14.5
+2026-06-12 21:18:24 | INFO | P05 | os=Windows 11
+2026-06-12 21:18:24 | INFO | P05 | shell=powershell
+2026-06-12 21:18:24 | INFO | P05 | cwd=.
+2026-06-12 21:18:24 | INFO | P05 | github_actions=False
+2026-06-12 21:18:24 | INFO | P05 | START main()
+2026-06-12 21:18:24 | INFO | P05 | ROOT_DIR: C:\Repos\datafun-05-sql
+2026-06-12 21:18:24 | INFO | P05 | DATA_RAW_DIR: C:\Repos\datafun-05-sql\data\raw\retail
+2026-06-12 21:18:24 | INFO | P05 | DATA_PROCESSED_DIR: C:\Repos\datafun-05-sql\data\processed\retail
+2026-06-12 21:18:24 | INFO | P05 | SQL_DIR: C:\Repos\datafun-05-sql\sql\duckdb
+2026-06-12 21:18:24 | INFO | P05 | DB_PATH: C:\Repos\datafun-05-sql\artifacts\duckdb\retail.duckdb
+2026-06-12 21:18:24 | INFO | P05 | RUN SQL script: C:\Repos\datafun-05-sql\sql\duckdb\case_retail_clean.sql
+2026-06-12 21:18:24 | INFO | P05 | DONE SQL script: C:\Repos\datafun-05-sql\sql\duckdb\case_retail_clean.sql
+2026-06-12 21:18:24 | INFO | P05 | RUN SQL script: C:\Repos\datafun-05-sql\sql\duckdb\case_retail_bootstrap.sql
+2026-06-12 21:18:25 | INFO | P05 | DONE SQL script: C:\Repos\datafun-05-sql\sql\duckdb\case_retail_bootstrap.sql
+2026-06-12 21:18:25 | INFO | P05 |
+2026-06-12 21:18:25 | INFO | P05 | RUN SQL query: C:\Repos\datafun-05-sql\sql\duckdb\case_retail_query_store_count.sql
+2026-06-12 21:18:25 | INFO | P05 | ====================================
+2026-06-12 21:18:25 | INFO | P05 | case_retail_query_store_count.sql
+2026-06-12 21:18:25 | INFO | P05 | ====================================
+2026-06-12 21:18:25 | INFO | P05 | store_count
+2026-06-12 21:18:25 | INFO | P05 | 3
+2026-06-12 21:18:25 | INFO | P05 |
+2026-06-12 21:18:25 | INFO | P05 | RUN SQL query: C:\Repos\datafun-05-sql\sql\duckdb\case_retail_query_sales_count.sql
+2026-06-12 21:18:25 | INFO | P05 | ====================================
+2026-06-12 21:18:25 | INFO | P05 | case_retail_query_sales_count.sql
+2026-06-12 21:18:25 | INFO | P05 | ====================================
+2026-06-12 21:18:25 | INFO | P05 | sale_count
+2026-06-12 21:18:25 | INFO | P05 | 30
+2026-06-12 21:18:25 | INFO | P05 |
+2026-06-12 21:18:25 | INFO | P05 | RUN SQL query: C:\Repos\datafun-05-sql\sql\duckdb\case_retail_query_sales_aggregate.sql
+2026-06-12 21:18:25 | INFO | P05 | ====================================
+2026-06-12 21:18:25 | INFO | P05 | case_retail_query_sales_aggregate.sql
+2026-06-12 21:18:25 | INFO | P05 | ====================================
+2026-06-12 21:18:25 | INFO | P05 | sale_count, total_revenue, avg_sale_amount
+2026-06-12 21:18:25 | INFO | P05 | 30, 5227.0, 174.23
+2026-06-12 21:18:25 | INFO | P05 |
+2026-06-12 21:18:25 | INFO | P05 | RUN SQL query: C:\Repos\datafun-05-sql\sql\duckdb\aaheid_retail_query_sales_by_category.sql
+2026-06-12 21:18:25 | INFO | P05 | ====================================
+2026-06-12 21:18:25 | INFO | P05 | aaheid_retail_query_sales_by_category.sql
+2026-06-12 21:18:25 | INFO | P05 | ====================================
+2026-06-12 21:18:25 | INFO | P05 | product_category, sale_count, total_revenue, avg_sale_amount
+2026-06-12 21:18:25 | INFO | P05 | Outdoors, 9, 3200.0, 355.56
+2026-06-12 21:18:25 | INFO | P05 | Clothing, 10, 1375.0, 137.5
+2026-06-12 21:18:25 | INFO | P05 | Food, 11, 652.0, 59.27
+2026-06-12 21:18:25 | INFO | P05 |
+2026-06-12 21:18:25 | INFO | P05 | RUN SQL query: C:\Repos\datafun-05-sql\sql\duckdb\case_retail_query_kpi_revenue.sql
+2026-06-12 21:18:25 | INFO | P05 | ====================================
+2026-06-12 21:18:25 | INFO | P05 | case_retail_query_kpi_revenue.sql
+2026-06-12 21:18:25 | INFO | P05 | ====================================
+2026-06-12 21:18:25 | INFO | P05 | store_id, store_name, city, region, sale_count, total_revenue, avg_sale_amount
+2026-06-12 21:18:25 | INFO | P05 | S003, Central Plaza, Mankato, South, 10, 1868.0, 186.8
+2026-06-12 21:18:25 | INFO | P05 | S001, North Market, Duluth, North, 10, 1834.0, 183.4
+2026-06-12 21:18:25 | INFO | P05 | S002, Lakeside Shop, Ely, North, 10, 1525.0, 152.5
+2026-06-12 21:18:25 | INFO | P05 | ========================
+2026-06-12 21:18:25 | INFO | P05 | Executed successfully!
+2026-06-12 21:18:25 | INFO | P05 | ========================
+2026-06-12 21:18:25 | INFO | P05 | END main()
