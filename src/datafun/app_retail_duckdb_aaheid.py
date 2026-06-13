@@ -152,7 +152,7 @@ def main() -> None:
         run_sql_query(con, SQL_DIR / "case_retail_query_sales_count.sql")
         run_sql_query(con, SQL_DIR / "case_retail_query_sales_aggregate.sql")
         run_sql_query(con, SQL_DIR / "aaheid_retail_query_sales_by_category.sql")
-
+        run_sql_query(con, SQL_DIR / "aaheid_retail_query_top_store.sql")
         # ----------------------------------------------------
         # STEP 4: RUN KPI QUERY (ACTION-DRIVEN)
         # ----------------------------------------------------

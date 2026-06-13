@@ -224,3 +224,25 @@ I copied the DuckDB example app and SQL query, then modified the sales-by-catego
 2026-06-12 21:18:25 | INFO | P05 | Executed successfully!
 2026-06-12 21:18:25 | INFO | P05 | ========================
 2026-06-12 21:18:25 | INFO | P05 | END main()
+
+## Custom SQL Project
+
+For Phase 5, I created a new SQL query to identify which store generated the highest total sales revenue.
+
+### New Business Question
+
+Which store had the highest total revenue?
+
+### Changes Made
+
+- Created aaheid_retail_query_top_store.sql
+- Added a new SQL query using SUM(amount)
+- Updated app_retail_duckdb_aaheid.py to execute the new query
+
+### Results
+
+The query ranked stores by total sales and identified the highest performing store.
+
+### What I Learned
+
+I learned how SQL queries can answer different business questions by grouping, aggregating, and sorting data.
